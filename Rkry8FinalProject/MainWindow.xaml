@@ -3,10 +3,59 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Rkry8FinalProject"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        PreviewKeyDown="Window_PreviewKeyDown"
+        Title="LiSA LiVE fan chant practice player(Demo version)" Height="800" Width="1280" Name="Window">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="659*"/>
+            <ColumnDefinition Width="613*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.ColumnSpan="2">
+            <Menu DockPanel.Dock="Left">
+                <MenuItem Header="File" Name="File" Height="30" Width="40">
+                    <MenuItem Name="OpenMp3Files" Header="OpenMp3Files" Click="OpenMp3Files_Click" Margin="0,0,-30,0"/>
+                </MenuItem>
+                <MenuItem Header="Languages" Height="30" Width="70" Name="Languages">
+                    <MenuItem Name="English" Header="English" Click="English_Click" Margin="0,0,-30,0"/>
+                    <MenuItem Name="Chinese" Header="中文" Click="Chinese_Click" Margin="0,0,-30,0"/>
+                    <MenuItem Name="Japanese" Header="日本語" Click="Japanese_Click" Margin="0,0,-30,0"/>
+                </MenuItem>
+                <MenuItem Name="Help" Header="Help" Height="30" Width="60">
+                    <MenuItem Name="About" Header="About" Click="about_Click" Margin="0,0,-30,0"/>
+                </MenuItem>
+                <MenuItem Name="Setting" Header="Setting" Click="Setting_Click"/>
+            </Menu>
+        </DockPanel>
+        <Button Content="Play" Name="PlayButton" HorizontalAlignment="Left" Margin="126,46,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="30" FontSize="16" FontFamily="UD Digi Kyokasho N-B" FontWeight="Bold" Click="PlayButton_Click"/>
+        <Button Content="Pause" Name="PauseButton" HorizontalAlignment="Left" Margin="20,46,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Height="30"  FontSize="16" FontFamily="UD Digi Kyokasho N-B" FontWeight="Bold" Click="PauseButton_Click"/>
+        <Button Content="Stop" Name="StopButton" HorizontalAlignment="Left" Margin="225,46,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="30" FontSize="16" FontFamily="UD Digi Kyokasho N-B" FontWeight="Bold" Click="StopButton_Click"/>
+        <Button Content="Previous" Name="PreviousButton" HorizontalAlignment="Left" Margin="20,96,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="30" FontSize="16" FontFamily="UD Digi Kyokasho N-B" FontWeight="Bold" Click="PreviousButton_Click"/>
+        <Button Content="Next" Name="NextButton" HorizontalAlignment="Left" Margin="126,96,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="30"  FontSize="16" FontFamily="UD Digi Kyokasho N-B" FontWeight="Bold" Click="NextButton_Click"/>
+        <TextBlock x:Name="pathTextblock" HorizontalAlignment="Left" Margin="53,5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="1034" FontSize="16" Grid.ColumnSpan="2" Height="21"/>
+        <TextBlock Name="currentTime" HorizontalAlignment="Left" Margin="520,53,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="31" Height="18" Grid.Column="1"><Run Text="00:00"/></TextBlock>
+        <TextBlock Name="totalTime" HorizontalAlignment="Left" Margin="399,53,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.864,0.778" Width="59" Height="18"><Run Text="Total Time"/></TextBlock>
+
+        <Slider Name="MusicSlider" Value="0" PreviewMouseUp="MusicSlider_PreviewMouseUp" PreviewMouseDown="MusicSlider_PreviewMouseDown" HorizontalAlignment="Left" Margin="476,53,0,0" Grid.Row="1" VerticalAlignment="Top" Width="686" Grid.ColumnSpan="2"/>
+        <TextBlock Name="Playlist" HorizontalAlignment="Left" Margin="20,153,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"><Run Text="Playlist:"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <ListBox Name="PlayListView" HorizontalAlignment="Left" Height="399" Margin="20,187,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280" SelectionChanged="PlayListView_SelectionChanged" PreviewMouseDoubleClick="PlayListView_PreviewMouseDoubleClick">
+
+        </ListBox>
+        <TextBlock Name="VolumeText" HorizontalAlignment="Left" Margin="96,623,0,0" Grid.Row="1" TextWrapping="Wrap" Text="VolumeText" VerticalAlignment="Top" FontSize="16"/>
+        <Slider Name="VolumeSlider" ValueChanged="VolumeSlider_ValueChanged" Maximum="100" Value="50" TickFrequency="5" TickPlacement="BottomRight" HorizontalAlignment="Left" Margin="22,669,0,0" Grid.Row="1" VerticalAlignment="Top" Width="280"/>
+        <TextBlock Name="Volume" HorizontalAlignment="Left" Margin="22,623,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Volume:" VerticalAlignment="Top" FontSize="16" />
+        <Viewbox HorizontalAlignment="Left" Height="100" Margin="538,204,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Image Name="Background" HorizontalAlignment="Left" Height="544" Margin="476,96,0,0" Grid.Row="1" VerticalAlignment="Top" Width="761" Opacity="0.35" Grid.ColumnSpan="2"/>
+        <Image gif:ImageBehavior.AutoStart="True" gif:ImageBehavior.RepeatBehavior="1x" Name="danceImage" HorizontalAlignment="Left" Height="491" Margin="476,153,0,0" Grid.Row="1" VerticalAlignment="Top" Width="761" Grid.ColumnSpan="2" Visibility="Collapsed" />
+        <TextBlock x:Name="LyricDisplay" HorizontalAlignment="Left" Margin="516,593,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="671" Grid.ColumnSpan="2" TextAlignment="Center"/>
+        <TextBlock x:Name="fanLyricDisplay" HorizontalAlignment="Left" Margin="516,153,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="672" Grid.ColumnSpan="2" TextAlignment="Center" FontWeight="Bold" Foreground="Red" />
+        <CheckBox Name="danceCheckbox" Content="dance" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,96,0,0" Grid.Row="1" IsEnabled="False"/>
+        <CheckBox Name="voiceCheckbox" Content="voice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,111,0,0" Grid.Row="1" IsEnabled="False"/>
+        <TextBlock Name="Path" HorizontalAlignment="Left" FontSize="16" Margin="22,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Path" VerticalAlignment="Top"/>
     </Grid>
 </Window>
