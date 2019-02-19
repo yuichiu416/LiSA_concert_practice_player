@@ -13,8 +13,10 @@ It's a player that can play musics with karaoke lyric, dances, and fan chants
 
 
 Extra libraries included:
-Wpfanimatedgif (to play gif files)
-WMPLib (to play musics)
+Wpfanimatedgif (to play gif files) 
+
+WMPLib (to play musics) 
+
 TagLib (to get info from the current music)
 
 ## Result
