@@ -21,4 +21,4 @@ TagLib (to get info from the current music)
 * Test with mp3 file and txt file in the package
 
 
-![result](example.JPG)
+![result](Example.JPG)
