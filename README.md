@@ -1,6 +1,6 @@
 ﻿# Karaoke Player for Concerts
 It's a player that can play musics with karaoke lyric, dances, and fan chants
-
+[An example of fan chants](https://youtu.be/JhUAOvomSSk?t=35)
 # New Features!
   - Supporting multiple languages (English/Chinese/Japanese)
   - Dynamic lyrics
