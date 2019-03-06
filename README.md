@@ -3,6 +3,10 @@ It's a player that can play musics with karaoke lyric, dances, and fan chants
 
 [An example of fan chants](https://youtu.be/JhUAOvomSSk?t=35)
 
+[First example of a dance at the concert](https://www.youtube.com/watch?v=Ipbb5EjfHYo&feature=youtu.be&t=377)
+
+[Sedond example of a dance at the concert](https://youtu.be/Ipbb5EjfHYo?t=686)
+
 # New Features!
   - Supporting multiple languages (English/Chinese/Japanese)
   - Dynamic lyrics
