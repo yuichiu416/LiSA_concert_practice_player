@@ -1,0 +1,200 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "taglib/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        }
+      },
+      "WpfAnimatedGif/1.4.16": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        },
+        "runtime": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win": {
+      "taglib/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        }
+      },
+      "WpfAnimatedGif/1.4.16": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        },
+        "runtime": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x64": {
+      "taglib/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        }
+      },
+      "WpfAnimatedGif/1.4.16": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        },
+        "runtime": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x86": {
+      "taglib/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        },
+        "runtime": {
+          "lib/policy.2.0.taglib-sharp.dll": {},
+          "lib/taglib-sharp.dll": {}
+        }
+      },
+      "WpfAnimatedGif/1.4.16": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        },
+        "runtime": {
+          "lib/net/WpfAnimatedGif.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "taglib/2.1.0": {
+      "sha512": "PuBT0KO/RJqxVKcM4tE0GDQIOA3584d2pHaLLh+X7tBz9MzFn9/mrVYaA63M+n7ED2dBXVtJBoogGnSxaqE7vg==",
+      "type": "package",
+      "path": "taglib/2.1.0",
+      "files": [
+        "lib/policy.2.0.taglib-sharp.config",
+        "lib/policy.2.0.taglib-sharp.dll",
+        "lib/taglib-sharp.dll",
+        "taglib.2.1.0.nupkg.sha512",
+        "taglib.nuspec"
+      ]
+    },
+    "WpfAnimatedGif/1.4.16": {
+      "sha512": "A4CMw16FLU8dSATv+9HiE/PqdpED0TY+MGmToooITxZvcab9HJZFJzJ527CTkySKwwGdc6HP1AU4Ywjavm4bRA==",
+      "type": "package",
+      "path": "wpfanimatedgif/1.4.16",
+      "files": [
+        "lib/net/WpfAnimatedGif.dll",
+        "lib/net/WpfAnimatedGif.xml",
+        "wpfanimatedgif.1.4.16.nupkg.sha512",
+        "wpfanimatedgif.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "WpfAnimatedGif >= 1.4.16",
+      "taglib >= 2.1.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\yui\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Assignments\\Rkry8FinalProject\\Rkry8FinalProject\\Rkry8FinalProject.csproj",
+      "projectName": "Rkry8FinalProject",
+      "projectPath": "D:\\Assignments\\Rkry8FinalProject\\Rkry8FinalProject\\Rkry8FinalProject.csproj",
+      "packagesPath": "C:\\Users\\yui\\.nuget\\packages\\",
+      "outputPath": "D:\\Assignments\\Rkry8FinalProject\\Rkry8FinalProject\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\yui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "WpfAnimatedGif": {
+            "target": "Package",
+            "version": "[1.4.16, )"
+          },
+          "taglib": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
